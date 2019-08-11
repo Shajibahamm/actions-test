@@ -1,10 +1,10 @@
 on: push
-name: Test 1
+name: Test
 jobs:
   test:
     name: Deploy
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master' && !github.deleted
+    if: github.ref == 'refs/heads/master'
     steps:
     - name: Echo something
       run: echo Something
